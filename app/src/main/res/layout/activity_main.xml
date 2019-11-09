@@ -5,93 +5,96 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    android:visibility="visible">
 
-    <ImageView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:alpha="0.1"
-        android:tint="@color/white"
-        app:srcCompat="@drawable/ic_phone_black_24dp" />
+        android:background="@color/colorPrimary"
+        android:visibility="visible">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:paddingStart="12dp"
-        android:paddingTop="12dp"
-        android:paddingEnd="12dp"
-        android:paddingBottom="8dp"
-        android:text="Truecaller Login"
-        android:textColor="@color/white"
-        android:textSize="38dp"
-        android:textStyle="normal" />
+        <Button
+            android:id="@+id/login_with_truecaller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/terms"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/ic_btn_background"
+            android:drawableLeft="@drawable/com_truecaller_icon"
+            android:padding="8dp"
+            android:text="Sign in With TrueCaller"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12dp" />
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/description"
-        android:layout_marginBottom="16dp"
-        android:paddingStart="12dp"
-        android:paddingTop="8dp"
-        android:paddingEnd="12dp"
-        android:paddingBottom="8dp"
-        android:text="Simplify mobile\nnumber verification\nand onboarding"
-        android:textColor="@color/white"
-        android:textSize="38dp"
-        android:textStyle="bold" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.1"
+            android:tint="@color/white"
+            app:srcCompat="@drawable/ic_phone_black_24dp"
+            tools:ignore="VectorDrawableCompat" />
 
-    <TextView
-        android:id="@+id/description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/login_with_truecaller"
-        android:layout_marginBottom="24dp"
-        android:paddingStart="12dp"
-        android:paddingTop="8dp"
-        android:paddingEnd="12dp"
-        android:paddingBottom="8dp"
-        android:text="Verify your app users with Truecaller SDK. Its simple and fast compared with OTP sign in."
-        android:textColor="@color/white"
-        android:textSize="24dp" />
-    <Button
-        android:id="@+id/login_with_truecaller"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/terms"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginBottom="12dp"
-        android:drawableLeft="@drawable/com_truecaller_icon"
-        android:padding="8dp"
-        android:background="@drawable/ic_btn_background"
-        android:text="Sign in With TrueCaller"
-        android:textColor="@color/colorPrimary"
-        android:textSize="12dp" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/description"
+            android:layout_marginBottom="16dp"
+            android:paddingStart="12dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="8dp"
+            android:text="Simplify mobile\nnumber verification\nand onboarding"
+            android:textColor="@color/white"
+            android:textSize="38dp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/terms"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="50dp"
-        android:paddingStart="12dp"
-        android:paddingTop="8dp"
-        android:paddingEnd="12dp"
-        android:paddingBottom="8dp"
-        android:text="By clicking 'Login with Triecaller' you agree with the Terms and Conditions of this app."
-        android:textColor="@color/white"
-        android:textSize="12dp" />
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/login_with_truecaller"
+            android:layout_marginBottom="24dp"
+            android:paddingStart="12dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="8dp"
+            android:text="Verify your app users with Truecaller SDK. Its simple and fast compared with OTP sign in."
+            android:textColor="@color/white"
+            android:textSize="24dp" />
 
-</RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:paddingStart="12dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="8dp"
+            android:text="Truecaller Login"
+            android:textColor="@color/white"
+            android:textSize="38dp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/terms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:paddingStart="12dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="8dp"
+            android:text="By clicking 'Login with Truecaller' you agree with the Terms and Conditions of this app."
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+    </RelativeLayout>
 
 </RelativeLayout>
