@@ -2,6 +2,7 @@ package com.oceanscan.truecaller.login;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -27,6 +28,22 @@ public class MainActivity extends AppCompatActivity {
             //check if Truecaller SDk is usable
             if (TrueSDK.getInstance().isUsable()) {
                 TrueSDK.getInstance().getUserProfile(MainActivity.this);
+            } else {
+                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
+                dialogBuilder.setMessage("Truecaller App not installed.");
+
+                dialogBuilder.setPositiveButton("OK", (dialog, which) -> {
+                            Log.d(TAG, "onClick: Closing dialog");
+
+                            dialog.dismiss();
+                        }
+                );
+
+                dialogBuilder.setIcon(R.drawable.com_truecaller_icon);
+                dialogBuilder.setTitle(" ");
+
+                AlertDialog alertDialog = dialogBuilder.create();
+                alertDialog.show();
             }
         });
 
